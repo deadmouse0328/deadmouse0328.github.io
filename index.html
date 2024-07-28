@@ -4,10 +4,10 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta charset="utf-8" />
 		<link rel="stylesheet" type="text/css" href="css/style.css" />
-		<title>任旸晖 市场监督管理局实习 七月22 至 26日SQL学习笔记:</title>
+		<title>任旸晖 SQL学习笔记:</title>
 	</head>
 <body>
-<h2>任旸晖 市场监督管理局实习 七月22 至 26日SQL学习笔记:</h2>
+<h2>任旸晖 SQL学习笔记:</h2>
 
 <h3>22日：</h3>
 
@@ -34,21 +34,7 @@
 <pre><code class="code-highlighted code-sql"><span class="syntax-all syntax-keyword">INSERT INTO</span> 表名 (字段名1, 字段名2, ...) <span class="syntax-all syntax-keyword">VALUES</span> (值1, 值2, ...);
 <span class="syntax-all syntax-keyword">UPDATE</span> 表名 <span class="syntax-all syntax-keyword">SET</span> 字段名1 <span class="syntax-all syntax-keyword">=</span> 值1, 字段名2 <span class="syntax-all syntax-keyword">=</span> 值2, ... [ <span class="syntax-all syntax-keyword">WHERE</span> 条件 ];</code></pre>
 
-<p><mark>遇到问题</mark>:</p>
-
-<p>当用SQLShell连接本地服务器时没有带端口号。解决方法:</p>
-
-<pre><code class="code-highlighted code-sql">root@<span class="syntax-all syntax-constant">127</span>.<span class="syntax-all syntax-constant">0</span>.<span class="syntax-all syntax-constant">0</span>.<span class="syntax-all syntax-constant">1</span>:<span class="syntax-all syntax-constant">3306</span></code></pre>
-
-<figure><img src="221721366126_.pic.jpg"/></figure>
-
 <h3>23日：</h3>
-
-<ol start="0">
-	<li>确定了接下来两周的SQL学习框架:</li>
-</ol>
-
-<figure><img src="251721611731_.pic_hd.jpg"/></figure>
 
 <ol>
 	<li>DQL数据查询（基础语法）：</li>
@@ -102,12 +88,6 @@
 <p>索引从0开始，起始索引 = （查询页码 - 1） <em> 每页显示记录数;</em></p>
 
 <h3>24日：</h3>
-
-<ol start="0">
-	<li>连接了服务器中的达梦数据库，安装并配置好了环境。</li>
-</ol>
-
-<figure><img src="731721814859_.pic.jpg"/></figure>
 
 <ol>
 	<li>DCL用户管理:</li>
@@ -214,22 +194,6 @@
 <p>撤销权限：</p>
 
 <pre><code class="code-highlighted code-sql"><span class="syntax-all syntax-keyword">REVOKE</span> 权限列表 <span class="syntax-all syntax-keyword">ON</span> <span class="syntax-all syntax-constant">数据库名</span>.<span class="syntax-all syntax-constant">表名</span> <span class="syntax-all syntax-keyword">FROM</span> <span class="syntax-all syntax-string">&#39;用户名&#39;</span>@<span class="syntax-all syntax-string">&#39;主机名&#39;</span>;</code></pre>
-
-<p><mark>遇到问题</mark>:</p>
-
-<ol>
-	<li>遇到server登录方式的失败，解决方法：</li>
-</ol>
-
-<pre><code class="code-highlighted code-sql">su <span class="syntax-all syntax-keyword">-</span> dmdba
-cd <span class="syntax-all syntax-keyword">/</span>home<span class="syntax-all syntax-keyword">/</span>dmdba<span class="syntax-all syntax-keyword">/</span>dmdbms<span class="syntax-all syntax-keyword">/</span>bin
-.<span class="syntax-all syntax-keyword">/</span>disql SYSDBA<span class="syntax-all syntax-keyword">/</span><span class="syntax-all syntax-string">&#39;&quot;Hn@dameng123&quot;&#39;</span>@localhost:<span class="syntax-all syntax-constant">5236</span></code></pre>
-
-<ol start="2">
-	<li>无法使用smb共享地址进行连接（暂无解决）:</li>
-</ol>
-
-<pre><code class="code-highlighted code-sql">smb:\\<span class="syntax-all syntax-constant">10</span>.<span class="syntax-all syntax-constant">0</span>.<span class="syntax-all syntax-constant">5</span>.<span class="syntax-all syntax-constant">26</span>\dmd$\TEST </code></pre>
 
 <h3>25日：</h3>
 
@@ -661,14 +625,6 @@ cd <span class="syntax-all syntax-keyword">/</span>home<span class="syntax-all s
 <pre><code class="code-highlighted code-sql"><span class="syntax-all syntax-keyword">SELECT</span> 字段列表 <span class="syntax-all syntax-keyword">FROM</span> 表A ...
 <span class="syntax-all syntax-keyword">UNION</span> [ALL]
 <span class="syntax-all syntax-keyword">SELECT</span> 字段列表 <span class="syntax-all syntax-keyword">FROM</span> 表B ...</code></pre>
-
-<p><mark>遇到问题</mark></p>
-
-<ol>
-	<li>目前无法吧xlsx文件用工具导入服务器上的数据库，可能需要创建cfg的配置文件，或者使用达梦客户端dts工具（暂未解决）：</li>
-</ol>
-
-<figure><img src="871721912919_.pic.jpg"/></figure>
 
 </body>
 </html>
